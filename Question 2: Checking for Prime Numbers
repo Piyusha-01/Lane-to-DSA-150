@@ -1,0 +1,20 @@
+Description: Write a program to determine if a number is prime.
+Example:
+Input: number = 7
+Output: Prime
+Explanation: 7 has no divisors other than 1 and itself, so it is a prime number.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Solution:
+def prime_or_not(n):
+  if n <= 0 :
+    return "Enter the valid Number"
+  else:
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return "Not Prime Number"
+        return "Prime Number"
+
+n=int(input("Enter the no. you want to check")
+result= prime_or_not(n)
+print(result)
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
