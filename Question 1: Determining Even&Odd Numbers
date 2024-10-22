@@ -1,0 +1,16 @@
+Description: Write a program to check whether a number is even or odd.
+Example:
+Input: number = 4
+Output: Even
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Solutions:
+def even_odd(n):
+  if(n%2==0):
+    return "EVEN"
+  else:
+    return "ODD"
+
+number=int(input("Enter the number you want to check:"))
+result=even_odd(number)
+print(result)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
