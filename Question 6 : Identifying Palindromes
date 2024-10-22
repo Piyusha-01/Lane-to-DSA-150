@@ -1,0 +1,18 @@
+Description: Write a program to check if a string or number is a palindrome.
+Example:
+Input: string = "radar"
+Output: Palindrome
+Explanation: "radar" reads the same backward as forward.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Solution:
+def is_palindrome(value):
+    value_str = str(value).replace(" ", "").lower()
+    return value_str == value_str[::-1]
+
+
+input_value = input("Enter a string or number: ")
+if is_palindrome(input_value):
+    print("Palindrome")
+else:
+    print("Not a palindrome")
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
