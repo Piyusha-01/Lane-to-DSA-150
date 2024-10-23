@@ -1,0 +1,48 @@
+Description: Write a program to create different star patterns (e.g., pyramid, diamond).
+Example:
+Input: patternType = "pyramid", height = 5
+Output:
+
+    *
+   ***
+  *****
+ *******
+*********
+
+Input: patternType = "diamond", height = 5
+Output:
+    *
+   ***
+  *****
+ *******
+*********
+ *******
+  *****
+   ***
+    *
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Solution:
+def pyramid_pattern(height):
+    for i in range(height):
+        print(' ' * (height - i - 1) + '*' * (2 * i + 1))
+
+def diamond_pattern(height):
+    # Upper half (pyramid)
+    for i in range(height):
+        print(' ' * (height - i - 1) + '*' * (2 * i + 1))
+    # Lower half (inverted pyramid)
+    for i in range(height - 2, -1, -1):
+        print(' ' * (height - i - 1) + '*' * (2 * i + 1))
+
+def print_pattern(patternType, height):
+    if patternType == "pyramid":
+        pyramid_pattern(height)
+    elif patternType == "diamond":
+        diamond_pattern(height)
+    else:
+        print("Invalid pattern type. Please choose 'pyramid' or 'diamond'.")
+
+patternType = input("Enter the pattern type (pyramid/diamond): ").lower()
+height = int(input("Enter the height: "))
+print_pattern(patternType, height)
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
