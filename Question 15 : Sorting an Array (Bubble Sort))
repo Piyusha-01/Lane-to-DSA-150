@@ -1,0 +1,20 @@
+Description: Write a program to sort an array of numbers in ascending order.
+Example:
+Input: array = [3, 1, 4, 1, 5, 9]
+Output: [1, 1, 3, 4, 5, 9]
+Explanation: The array sorted in ascending order is [1, 1, 3, 4, 5, 9].
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Solutions:
+
+def sort_with_bulitin_func(arr):
+    return (sorted(arr))
+
+def bubble_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            # Swap if the current element is greater than the next element
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+    return arr
+    
